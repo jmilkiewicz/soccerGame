@@ -1,12 +1,10 @@
 package foo.bar.app;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 public class SoccerDataObject {
-    private Set<Display> displays = new HashSet<>();
+    private final Set<Display> displays = new CopyOnWriteArraySet<>();
 
     public int getGoalsTeamA(){
        return -1;

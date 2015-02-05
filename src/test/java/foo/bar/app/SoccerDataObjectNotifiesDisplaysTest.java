@@ -26,7 +26,7 @@ public class SoccerDataObjectNotifiesDisplaysTest {
 
 
     @Test
-    public void shallNotifyAMultipleDisplayOnMeasurementsChanged() throws Exception {
+    public void shallNotifyAMultipleDisplaysOnMeasurementsChanged() throws Exception {
         soccerDataObject.appendDisplay(mockDisplay);
         soccerDataObject.appendDisplay(mockDisplay2);
 
@@ -37,7 +37,7 @@ public class SoccerDataObjectNotifiesDisplaysTest {
     }
 
     @Test
-    public void shallAlwaysNotifyAllDisplaysInCaseOfDisplayException() throws Exception {
+    public void shallAlwaysNotifyAllDisplaysEvenInCaseOfDisplayException() throws Exception {
         soccerDataObject.appendDisplay(mockDisplay);
         soccerDataObject.appendDisplay(mockDisplay2);
         doThrow(new RuntimeException()).when(mockDisplay).onMeasurementsChanged(Matchers.<SoccerDataObject>anyObject());

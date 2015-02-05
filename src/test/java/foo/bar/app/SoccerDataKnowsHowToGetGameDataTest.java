@@ -9,7 +9,7 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-public class SoccerDataKnowsHowToGetSoccerDataTest {
+public class SoccerDataKnowsHowToGetGameDataTest {
     public static final int A_TEAM_GOALS = 3;
     public static final int B_TEAM_GOALS = 1;
     public static final int CURRENT_MINUTE = 77;

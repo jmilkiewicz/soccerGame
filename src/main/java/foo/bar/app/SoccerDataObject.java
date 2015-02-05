@@ -1,7 +1,12 @@
 package foo.bar.app;
 
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
+
 public class SoccerDataObject {
-    private Display display;
+    private Set<Display> displays = new HashSet<>();
 
     public int getGoalsTeamA(){
        return -1;
@@ -16,10 +21,13 @@ public class SoccerDataObject {
     }
 
     public void measurementsChanged(){
-        display.onMeasurementsChanged(this);
+        for (Display display : displays) {
+            display.onMeasurementsChanged(this);
+        }
+
     }
 
     public void appendDisplay(Display display) {
-        this.display = display;
+        displays.add(display);
     }
 }

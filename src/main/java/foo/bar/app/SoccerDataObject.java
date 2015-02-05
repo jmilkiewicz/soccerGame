@@ -5,17 +5,22 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 public class SoccerDataObject {
     private final Set<Display> displays = new CopyOnWriteArraySet<>();
+    private final GameDataClient gameDataClient;
+
+    public SoccerDataObject(GameDataClient gameDataClient) {
+        this.gameDataClient = gameDataClient;
+    }
 
     public int getGoalsTeamA(){
-       return -1;
+       return gameDataClient.getGoalsTeamA();
     }
 
     public int getGoalsTeamB(){
-        return -1;
+        return gameDataClient.getGoalsTeamB();
     }
 
     public int getCurrentMinute(){
-        return -1;
+        return gameDataClient.getCurrentMinute();
     }
 
     public void measurementsChanged(){

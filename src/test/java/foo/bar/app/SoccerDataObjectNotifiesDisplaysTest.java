@@ -13,7 +13,7 @@ import static org.mockito.Mockito.when;
 public class SoccerDataObjectNotifiesDisplaysTest {
     private Display mockDisplay = Mockito.mock(Display.class);
     private Display mockDisplay2 = Mockito.mock(Display.class);
-    private final SoccerDataObject soccerDataObject = new SoccerDataObject();
+    private final SoccerDataObject soccerDataObject = new SoccerDataObject(Mockito.mock(GameDataClient.class));
 
     @Test
     public void shallNotifyASingleDisplayOnMeasurementsChanged() throws Exception {

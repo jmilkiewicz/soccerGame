@@ -22,9 +22,17 @@ public class SoccerDataObject {
 
     public void measurementsChanged(){
         for (Display display : displays) {
-            display.onMeasurementsChanged(this);
+            notifyDisplay(display);
         }
 
+    }
+
+    private void notifyDisplay(Display display) {
+        try {
+            display.onMeasurementsChanged(this);
+        } catch (Exception ex){
+            //TODO some logging,some action ...
+        }
     }
 
     public void appendDisplay(Display display) {

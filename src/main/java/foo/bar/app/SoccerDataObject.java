@@ -1,6 +1,8 @@
 package foo.bar.app;
 
 public class SoccerDataObject {
+    private Display display;
+
     public int getGoalsTeamA(){
        return -1;
     }
@@ -14,10 +16,10 @@ public class SoccerDataObject {
     }
 
     public void measurementsChanged(){
-
+        display.onMeasurementsChanged();
     }
 
     public void appendDisplay(Display display) {
-        //To change body of created methods use File | Settings | File Templates.
+        this.display = display;
     }
 }

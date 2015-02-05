@@ -8,5 +8,5 @@ package foo.bar.app;
  * To change this template use File | Settings | File Templates.
  */
 public interface Display {
-    void onMeasurementsChanged();
+    void onMeasurementsChanged(SoccerDataObject soccerDataObject);
 }

@@ -16,7 +16,7 @@ public class SoccerDataObject {
     }
 
     public void measurementsChanged(){
-        display.onMeasurementsChanged();
+        display.onMeasurementsChanged(this);
     }
 
     public void appendDisplay(Display display) {

@@ -16,8 +16,7 @@ public class SoccerDataObjectNotifiesDisplaysTest {
 
         soccerDataObject.measurementsChanged();
 
-        verify(mockDisplay).onMeasurementsChanged();
-
-
+        verify(mockDisplay).onMeasurementsChanged(soccerDataObject);
     }
+
 }

@@ -13,10 +13,10 @@ import static org.mockito.Mockito.when;
 public class SoccerDataObjectNotifiesDisplaysTest {
     private Display mockDisplay = Mockito.mock(Display.class);
     private Display mockDisplay2 = Mockito.mock(Display.class);
+    private final SoccerDataObject soccerDataObject = new SoccerDataObject();
 
     @Test
     public void shallNotifyASingleDisplayOnMeasurementsChanged() throws Exception {
-        SoccerDataObject soccerDataObject = new SoccerDataObject();
         soccerDataObject.appendDisplay(mockDisplay);
 
         soccerDataObject.measurementsChanged();
@@ -27,7 +27,6 @@ public class SoccerDataObjectNotifiesDisplaysTest {
 
     @Test
     public void shallNotifyAMultipleDisplayOnMeasurementsChanged() throws Exception {
-        SoccerDataObject soccerDataObject = new SoccerDataObject();
         soccerDataObject.appendDisplay(mockDisplay);
         soccerDataObject.appendDisplay(mockDisplay2);
 
@@ -39,7 +38,6 @@ public class SoccerDataObjectNotifiesDisplaysTest {
 
     @Test
     public void shallAlwaysNotifyAllDisplaysInCaseOfDisplayException() throws Exception {
-        SoccerDataObject soccerDataObject = new SoccerDataObject();
         soccerDataObject.appendDisplay(mockDisplay);
         soccerDataObject.appendDisplay(mockDisplay2);
         doThrow(new RuntimeException()).when(mockDisplay).onMeasurementsChanged(Matchers.<SoccerDataObject>anyObject());

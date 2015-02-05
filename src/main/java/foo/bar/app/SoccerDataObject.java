@@ -17,4 +17,7 @@ public class SoccerDataObject {
 
     }
 
+    public void appendDisplay(Display display) {
+        //To change body of created methods use File | Settings | File Templates.
+    }
 }
